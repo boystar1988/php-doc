@@ -1,0 +1,25 @@
+{
+    "name": "boystar/php-doc",
+    "authors": [
+        {
+            "name": "zhaozhuobin",
+            "email": "814411929@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "symfony/console": "^2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "command\\": "command/",
+            "demo\\": "demo/"
+        }
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}

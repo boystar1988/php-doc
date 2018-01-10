@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+set_time_limit(0);
+
+require __DIR__.'/../vendor/autoload.php';
+use Symfony\Component\Console\Application;
+
+$commandPath = dirname(__DIR__).DIRECTORY_SEPARATOR.'command';
+$application = new Application();
+$app_list = [];
+
+foreach (glob($commandPath.'/*Command.php') as $row){
+    $class = sprintf('command\\%s', basename($row, '.php'));
+    $object = new \ReflectionClass($class);
+    $app_list[] = $object->newInstance();
+}
+
+$application->addCommands($app_list);
+$application->setAutoExit(false);
+$application->run();
