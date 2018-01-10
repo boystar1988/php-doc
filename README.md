@@ -16,8 +16,7 @@
 ```
  php console app:create-doc <class> [template]
 ```
->说明: `class` 指定类(如:demo\User),`template`是文档主题默认值是default，用于切换自定义模板。
->例子：`php console app:create-doc "demo\User"`
+>说明: `class` 指定类(如:demo\User),`template`是文档主题默认值是default，用于切换自定义模板。例子：`php console app:create-doc "demo\User"`
 
 ## 二.注释写法：
 
